@@ -28,7 +28,7 @@ let
     { name = "loop-up";
       task = true;
       startOn = "mounted MOUNTPOINT=/ephemeral0";
-      script = "${pkgs.utillinux}/sbin/losetup /dev/loop0 /ephemeral0/backing && start drbd-up";
+      script = "${pkgs.util-linux}/sbin/losetup /dev/loop0 /ephemeral0/backing && start drbd-up";
     };
 
 in {

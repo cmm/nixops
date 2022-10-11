@@ -15,7 +15,7 @@ let
             diskImage=$out/image
             ${pkgs.vmTools.qemu}/bin/qemu-img create -f qcow2 -b ${base_image}/disk.qcow2 $diskImage
           '';
-        buildInputs = [ pkgs.utillinux ];
+        buildInputs = [ pkgs.util-linux ];
         postVM =
           ''
             mv $diskImage $out/disk.qcow2

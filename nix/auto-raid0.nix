@@ -57,7 +57,7 @@ with utils;
             before = [ mapperDevice'' "mkfs-${mapperDevice'}.service" ];
             requires = devices';
             after = devices';
-            path = [ pkgs.utillinux pkgs.lvm2 ];
+            path = [ pkgs.util-linux pkgs.lvm2 ];
             unitConfig.DefaultDependencies = false; # needed to prevent a cycle
             serviceConfig.Type = "oneshot";
             script =

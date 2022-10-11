@@ -106,7 +106,7 @@ with utils;
             before = [ mapperDevice'' "mkfs-${mapperDevice'}.service" ];
             requires = [ device' "keys.target" ];
             after = [ device' "keys.target" ];
-            path = [ pkgs.cryptsetup pkgs.utillinux ];
+            path = [ pkgs.cryptsetup pkgs.util-linux ];
             unitConfig.DefaultDependencies = false; # needed to prevent a cycle
             serviceConfig.Type = "oneshot";
             script =

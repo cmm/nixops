@@ -30,7 +30,7 @@ in pkgs.vmTools.runInLinuxVM (
         ''
           mv $diskImage $out/disk.qcow2
         '';
-      buildInputs = [ pkgs.utillinux pkgs.perl ];
+      buildInputs = [ pkgs.util-linux pkgs.perl ];
       exportReferencesGraph =
         [ "closure" config.system.build.toplevel ];
     }
